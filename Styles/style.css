@@ -11,6 +11,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .play-window {
@@ -64,6 +66,13 @@ body {
 #button-bullet {
     width: 30%;
     margin-bottom: 5vh;
+}
+
+.player {
+    width: 30px;
+    height: 30px;
+    background-image: url("/Images/turtle.gif");
+    position: absolute;
 }
 
 
