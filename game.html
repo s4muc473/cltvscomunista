@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style.css">
+    <title>@math.jsx</title>
+</head>
+
+<body>
+    <main class="play-window" style="display: block;">
+        
+        <section class="play-window-points">
+            <h1> Comunistas Empregados: <p style="display: inline-block;color: brown;" id="total-sacolas"></p><br>SUA VELOCIDADE: <p style="display: inline-block;color: brown;" id="most-vel"></p> VELOCIDADE DO INIMIGO: <p style="display: inline-block;color: brown;" id="most-vel-inimigo"></p></h1>
+        </section>
+
+        <div id="player" class="player"></div>
+
+
+        <div class="player-derroted" style="display: none;">
+            <h1>VOCE FICOU DESEMPREGADO!</h1>
+            <p>O Comunistas te pegaram! reinicie o game [CLIQUE NA TECLA ENTER]</p>
+            <br>
+            <h1>PONTUAÇÃO: <p id="pontos-finais"></p></h1>
+        </div>
+    </main>
+    
+
+    <script src="Scripts/main.js"></script>
+</body>
+</html>

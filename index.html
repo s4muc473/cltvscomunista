@@ -1,49 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles/style.css">
-    <title>Turtle counts pollution</title>
+    <script src="https://kit.fontawesome.com/2ec87f2ee1.js" crossorigin="anonymous"></script>
+    <title>Banner</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            animation: mudarCor 3s infinite alternate;
+        }
+
+        @keyframes mudarCor {
+            0% {
+                background-color: red; /* Cor do topo */
+            }
+            100% {
+                background-color: black; /* Cor da base */
+            }
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 30vh;
+            font-size: 78px;
+            font-family: Arial, Helvetica, sans-serif;
+            color:#fff;
+        }
+
+        span {
+            color: #000;
+            background-color: red;
+            border-radius: 5px;
+            font-size: 0.8em;
+            margin-left: 7px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        div {
+            position: relative;
+            left: 40%;
+            bottom: 18vh;
+        }
+    </style>
 </head>
-
-<!--                   
- __          /'___\                 
-/\_\    ___ /\ \__/  _ __    __     
-\/\ \ /' _ `\ \ ,__\/\`'__\/'__`\   
- \ \ \/\ \/\ \ \ \_/\ \ \//\ \L\.\_ 
-  \ \_\ \_\ \_\ \_\  \ \_\\ \__/.\_\
-   \/_/\/_/\/_/\/_/   \/_/ \/__/\/_/
-                                    -->
-
 <body>
-    <main class="play-window">
-        <section class="play-window-points">
-            <h1 id="points-time"> Pontos: <p style="display: inline-block;" id="points">0</p> Sacolas Eliminadas: <p style="display: inline-block;" id="total-sacolas">0</p></h1>
-        </section>
-
-        <div id="player" class="player"></div>
-
-        <section class="play-window-controls">
-            <button class="play-window-controls-button" id="button-left">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
-                    <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
-                </svg>
-            </button>
-            <button class="play-window-controls-button" id="button-bullet">
-                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="10" fill="black"/>
-                </svg>
-            </button>
-            <button class="play-window-controls-button" id="button-right">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                    <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-                </svg>
-            </button>
-        </section>
+    <main>
+        <p onclick="iniciar()">CLT vs <strong><span id="span">COMUNISTAS</span></strong></p>
+        <h1>@math.jsx</h1>
+        <div>
+            <i id="cursor" class="fa-solid fa-arrow-pointer"></i>
+        </div>
     </main>
-    
 
-    <script src="Scripts/main.js"></script>
+    <script>
+        let cursor = document.getElementById("cursor");
+        let span = document.getElementById('span');
+
+
+        document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+                window.location.href = "game.html";
+            }
+        });
+
+        document.addEventListener('mousedown', function(event) {
+            window.location.href = "game.html";
+        });
+
+        function iniciar() {
+            window.location.href = "game.html";
+        }
+
+        let isOrange = true;
+
+        setInterval(() => {
+            isOrange = !isOrange;
+            cursor.style.color = isOrange ? 'white' : 'black';
+        }, 300); 
+    </script>
 </body>
 </html>

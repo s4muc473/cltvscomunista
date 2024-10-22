@@ -1,0 +1,6 @@
+ATUALIZAÇÃO DO GAME
+
+- Adicionar sistema de gerenciamento de usuarios e ranking.
+- Adicionar novos inimigos
+- Adicionar novas animações no player
+- Adicionar novos elementos de interação e eventos
